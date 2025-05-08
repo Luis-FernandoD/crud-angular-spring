@@ -16,6 +16,7 @@ export class CoursesComponent {
         category: 'Frontend'
       },
     ];
+
     displayedColumns = ['name', 'category'];
 
     constructor() {
