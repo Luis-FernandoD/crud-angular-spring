@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +13,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     MatToolbarModule,
   ],
-  exports: [MatToolbarModule],
+  exports: [
+    MatToolbarModule,
+  ],
   providers: [
     provideClientHydration(withEventReplay())
   ],
