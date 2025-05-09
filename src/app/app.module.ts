@@ -4,7 +4,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
   ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
